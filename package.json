@@ -1,0 +1,24 @@
+{
+    "name": "stage_app_assignment",
+    "version": "1.0.0",
+    "description": "Assignment for Stage App",
+    "main": "index.js",
+    "dependencies": {
+        "aws-lambda": "^1.0.7",
+        "pg": "^8.11.5",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.138",
+        "@types/node": "^20.12.12",
+        "@types/pg": "^8.11.6",
+        "@types/uuid": "^9.0.8",
+        "serverless-offline": "^13.6.0"
+    },
+    "scripts": {
+        "build": "tsc",
+        "deploy": "npm run build && serverless deploy"
+    },
+    "author": "Shivan Trivedi",
+    "license": "ISC"
+}

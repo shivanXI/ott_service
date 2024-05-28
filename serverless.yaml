@@ -1,0 +1,57 @@
+# serverless.yaml
+service: my-list-feature
+
+custom:
+  configFile: ${file(./config/creds.yml)}
+
+provider:
+  name: aws # Adjust for your cloud provider
+  runtime: nodejs16.x # Adjust for your Node.js version
+  region: ap-south-1
+  memorySize: 256
+  timeout: 30
+  logRetentionInDays: 7
+  endpointType: regional
+  environment:
+    DB_HOST: ${self:custom.configFile.DB_HOST}
+    DB_USER: ${self:custom.configFile.DB_USER}
+    DB_PASSWORD: ${self:custom.configFile.DB_PASSWORD}
+    DB_NAME: ${self:custom.configFile.DB_NAME}
+
+functions:
+  addToFavorites:
+    handler: dist/src/handlers/addToMyList.handler
+    events:
+      - http:
+          path: /users/{userId}/favorites/add
+          method: POST
+          cors: true
+
+  getFavorites:
+    handler: dist/src/handlers/getMyList.handler
+    events:
+      - http:
+          path: /users/{userId}/favorites/fetch
+          method: GET
+          cors: true
+
+  removeFromFavorites:
+    handler: dist/src/handlers/removeFromList.handler
+    events:
+      - http:
+          path: /users/{userId}/favorites/remove
+          method: DELETE
+          cors: true
+
+
+plugins:
+  - serverless-offline
+
+package:
+  patterns:
+    - "!.git/**"
+    - '!*.md'
+    - '!__tests__/**'
+    - '!db/**'
+  individually: false
+  excludeDevDependencies: true
