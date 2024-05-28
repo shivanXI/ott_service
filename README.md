@@ -1,4 +1,4 @@
-OTT Feature : My List [Add in list, List My Items, Remove from list]
+# OTT Feature : My List [Add in list, List My Items, Remove from list]
 
 Follow steps for the Local Setup and to play with the APIs :
 ------------------------------------------------------------
@@ -48,6 +48,7 @@ Optimizations :
 2. Lambda functions are on-demand write now as it does not cost much in this case but if tested for real time scale , prewarming i.e. provisioning can be done with a single click.
 3. As per the scope of assignment, cache usage was not required but it can be added to "List My Items" API for more performance time optimization at scale.
 
+![Logo](./images/test_image.png)
 
 
 
