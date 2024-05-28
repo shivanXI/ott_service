@@ -35,17 +35,19 @@ Assumptions :
 Infrastructure Elements on Cloud (Hosting):
 -------------------------------------------
 1. This whole feature is deployed over AWS Lambda functions which are cost effective in nature due to pay per usage analogy.
-2. Serverless framewrok
-3. API Gateway 
+2. Serverless framework
 4. Basic Amazon RDS instance for database having postgresql engine running over it.
-5. This Infra is working under a VPC.
+5. This Infra is working under a VPC so latency in milliseconds can be a bit more then expected.
 6. Creds are stored in Secret manager.
+7. Whole system is hosted for 24 hours only that is 28-29/05/2024 on AWS , it will be destroyed after 29/05/2024 9PM IST as 24 hrs based costing can come into the picture.
+8. Hosted IP : 65.1.80.88, Please replace "localhost" in insomnia/postman in endpoints with this IP adress to check hosted API endpoints , also it is "http" in nature as per scope of assignment.
 
 Optimizations :
 ---------------
 1. Indexes are placed in DB so that query performance in terms reduces and API execution time comes under 10 millisec as mentioned in the assignment. [Please refer screenshot added to this readme.md]
-2. Lambda functions are on-demand write now as it does not cost much in this case but if tested for scale , prewarming i.e. provisioning can be done with a single click.
+2. Lambda functions are on-demand write now as it does not cost much in this case but if tested for real time scale , prewarming i.e. provisioning can be done with a single click.
 3. As per the scope of assignment, cache usage was not required but it can be added to "List My Items" API for more performance time optimization at scale.
+
 
 
 
