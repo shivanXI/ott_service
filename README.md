@@ -1,4 +1,4 @@
-** OTT Feature : My List [Add in list, List My Items, Remove from list] **
+OTT Feature : My List [Add in list, List My Items, Remove from list]
 
 Follow steps for the Local Setup and to play with the APIs :
 ------------------------------------------------------------
@@ -32,9 +32,9 @@ Assumptions :
 3. Foreign Keys are not used.
 4. For now authentication is kept inside APIs only, but can be added to API gateway with isolation from APIs.
 
-Infrastructure on Cloud :
--------------------------
-1. This whole feature is deployed over AWS Lambda functions which are cost effective in nature due to pay per cost analogy.
+Infrastructure Elements on Cloud (Hosting):
+-------------------------------------------
+1. This whole feature is deployed over AWS Lambda functions which are cost effective in nature due to pay per usage analogy.
 2. Serverless framewrok
 3. API Gateway 
 4. Basic Amazon RDS instance for database having postgresql engine running over it.
