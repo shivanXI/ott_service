@@ -32,15 +32,14 @@ Assumptions :
 3. Foreign Keys are not used.
 4. For now authentication is kept inside APIs only, but can be added to API gateway with isolation from APIs.
 
-Infrastructure Elements on Cloud (Hosting):
+Infrastructure Elements on Cloud [AWS] (Hosting):
 -------------------------------------------
 1. This whole feature is deployed over AWS Lambda functions which are cost effective in nature due to pay per usage analogy.
 2. Serverless framework
 4. Basic Amazon RDS instance for database having postgresql engine running over it.
 5. This Infra is working under a VPC so latency in milliseconds can be a bit more then expected.
 6. Creds are stored in Secret manager.
-7. Whole system is hosted for 24 hours only that is 28-29/05/2024 on AWS , it will be destroyed after 29/05/2024 9PM IST as 24 hrs based costing can come into the picture.
-8. Hosted IP will be shared on Email, Please replace "localhost" in insomnia/postman in endpoints with this IP adress to check hosted API endpoints , also it is "http" in nature as per scope of assignment.
+7. Hosted IP will be shared on Email, Please replace "localhost" in insomnia/postman in endpoints with this IP adress to check hosted API endpoints , also it is "http" in nature as per scope of assignment.
 
 Optimizations :
 ---------------
