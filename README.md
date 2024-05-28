@@ -21,7 +21,7 @@ Tech Stack Used :
 1. Typescript as code 
 2. Serverless with Lambda functions in AWS as APIs
 3. Database : Postgresql ( Initially started working in MongoDB but changed the decision at end moment because of issue of deployement of MongoDB on AWS connected with AWS Lambda Functions )
-4. Deployment & CI/CD : Serverless framework takes care of whole deployment with CI/CD from local to cloud with single command "serverless deploy" and according to me for the scope of assignment, it is the simplest choice.
+4. Deployment & CI/CD : Serverless framework takes care of whole deployment from local to cloud with single command "serverless deploy" and according to me for the scope of assignment, it is the simplest choice. Github Actions based CI/CD is used to deploy the changes under github_workflows folder.
 5. Testing Framework used here is "jest"
 
 Assumptions :
