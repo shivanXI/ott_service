@@ -1,6 +1,16 @@
 const { handler } = require("../src/handlers/addToMyList");
+const { Server } = require("serverless-offline");
 
 describe("addToFavorites", () => {
+  let server;
+
+  beforeAll(async () => {
+    server = new Server("./serverless.yml");
+    await server.start("-p", 3000); // Start server on port 3000
+  });
+
+  afterAll(() => server.stop());
+  
   it("should add favorite", async () => {
     const userId = "user_id_1";
     const contentId = "new_content_id_101";

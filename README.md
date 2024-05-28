@@ -14,7 +14,7 @@ Follow steps for the Local Setup and to play with the APIs :
 10. Now go to the insomnia / postman and import the "Insomnia_2024-05-28" file which contains all the API endpoints and required params to pass in the API endpoints.
 11. Now everything is ready to play with these APIs via insomnia/postman.
 12. For running tests go to the __tests__ folder inside repo 
-13. Enter : "jest __tests__/**/*.test.js" (Please check version of dependencies)
+13. Enter : "npx jest" OR "jest __tests__/**/*.test.js" (Please check version of dependecies in your system)
 
 Tech Stack Used :
 -----------------

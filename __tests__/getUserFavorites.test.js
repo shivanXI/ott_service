@@ -1,4 +1,4 @@
-const { getUserFavorites } = require("../resolvers/mylistHelpers");
+const { getUserFavorites } = require("../src/resolvers/mylistHelpers");
 const { Server } = require("serverless-offline");
 
 describe("getUserFavorites", () => {
