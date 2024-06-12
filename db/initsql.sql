@@ -176,8 +176,10 @@ VALUES
 CREATE INDEX idx_user_favorites_user_id_is_removed_created_at
 ON user_favorites (user_id, is_removed, created_at DESC);
 
-CREATE INDEX idx_movies_id ON movies (id);
+CREATE INDEX idx_user_favorites_optimized
+ON user_favorites (user_id, is_removed, created_at DESC)
+INCLUDE (content_type, content_id);
 
-CREATE INDEX idx_tv_show_id ON tv_show (id);
+
 
 
